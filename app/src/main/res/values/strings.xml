@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Rick and Morty</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="characters">Characters</string>
+    <string name="locations">Locations</string>
+    <string name="episodes">Episodes</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="last_location">Last location:</string>
+    <string name="Details">Details</string>
+    <string name="hint">Enter the character\'s name</string>
+    <string name="name">Name:</string>
+    <string name="close">Close</string>
+    <string name="select">Select</string>
+    <string name="choose_a_filter">Choose a filter</string>
+
+    <string-array name="filter_characters">
+        <item>Search by :</item>
+        <item>Alive</item>
+        <item>Dead</item>
+        <item>Alien</item>
+        <item>Female</item>
+        <item>Human</item>
+        <item>Name</item>
+    </string-array>
+
+    <string-array name="filter_episode">
+        <item>Search by :</item>
+        <item>Episode</item>
+        <item>Number</item>
+    </string-array>
+
+    <string-array name="filter_location">
+        <item>Search by :</item>
+        <item>Location</item>
+        <item>Type</item>
+        <item>Dimension</item>
+    </string-array>
+
+</resources>

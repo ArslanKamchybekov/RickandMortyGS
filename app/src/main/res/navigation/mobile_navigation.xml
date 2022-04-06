@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_characters">
+
+    <fragment
+        android:id="@+id/navigation_characters"
+        android:name="kg.geektech.rickandmorty.presentation.characters.CharactersFragment"
+        android:label="@string/characters"
+        tools:layout="@layout/fragment_characters">
+
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/navigation_character_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_locations"
+        android:name="kg.geektech.rickandmorty.presentation.locations.LocationsFragment"
+        android:label="@string/locations"
+        tools:layout="@layout/fragment_locations">
+
+        <action
+            android:id="@+id/action_locationsFragment_to_locationDetailFragment"
+            app:destination="@id/navigation_location_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_episodes"
+        android:name="kg.geektech.rickandmorty.presentation.episodes.EpisodesFragment"
+        android:label="@string/episodes"
+        tools:layout="@layout/fragment_episodes">
+
+        <action
+            android:id="@+id/action_episodesFragment_to_episodeDetailFragment"
+            app:destination="@id/navigation_episode_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="kg.geektech.rickandmorty.presentation.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_episodeDetailFragment"
+            app:destination="@id/navigation_episode_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_searchFragment_to_locationDetailFragment"
+            app:destination="@id/navigation_location_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_searchFragment_to_characterDetailFragment"
+            app:destination="@id/navigation_character_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_character_detail"
+        android:name="kg.geektech.rickandmorty.presentation.character_detail.CharacterDetailFragment"
+        android:label="@string/Details"
+        tools:layout="@layout/fragment_character_detail">
+
+        <argument
+            android:name="character"
+            app:argType="kg.geektech.rickandmorty.domain.models.CharacterDetail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_location_detail"
+        android:name="kg.geektech.rickandmorty.presentation.location_detail.LocationDetailFragment"
+        android:label="@string/Details"
+        tools:layout="@layout/fragment_location_detail">
+
+        <argument
+            android:name="location"
+            app:argType="kg.geektech.rickandmorty.domain.models.LocationDetail" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_episode_detail"
+        android:name="kg.geektech.rickandmorty.presentation.episode_detail.EpisodeDetailFragment"
+        android:label="@string/Details"
+        tools:layout="@layout/fragment_episode_detail">
+
+        <argument
+            android:name="episode"
+            app:argType="kg.geektech.rickandmorty.domain.models.EpisodeDetail" />
+
+    </fragment>
+
+</navigation>
